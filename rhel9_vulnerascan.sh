@@ -1,11 +1,9 @@
 #!/bin/bash -
-##################################################################
 # Author:               Christo Deale                  
 # Date  :               2023-09-13            
-# rhel9_vulnerascan:    Utility to scan for RHEL 9 vulnerabilities
-#                       and report using OSCAP
+# rhel9_vulnerascan:    Utility to scan for RHEL 9 vulnerabilities and report using OSCAP
 # requirements:         yum install openscap openscap-scanner             
-##################################################################
+
 # Check if oval.xml exists
 if [ ! -f "./oval.xml" ]; then
     wget -O - https://www.redhat.com/security/data/oval/v2/RHEL9/rhel-9.oval.xml.bz2 | bzip2 --decompress > rhel-9.oval.xml
